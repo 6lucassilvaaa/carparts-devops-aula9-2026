@@ -1,0 +1,175 @@
+AULA 9 — PRÁTICA CARPARTS
+
+Repositório: https://github.com/6lucassilvaaa/carparts-devops-aula9-2026
+PR para revisão humana: https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/pull/1
+
+STATUS: laboratório implementado e validado; merge queue e revisão humana permanecem pendentes.
+
+========================================================================
+README.md
+========================================================================
+# Carparts — prática DevOps da Aula 9
+
+Laboratório didático novo, criado com assistência de IA. Não representa o repositório real ou o histórico operacional de uma empresa. O HTML original usa “Aula 08” no cabeçalho; a atividade no Classroom está como Aula 9.
+
+## Execução
+
+Requer Node.js 22 ou posterior e Git. Execute npm test. Não há instalação de dependências. O código mínimo de estoque permite verificar regras reais e reproduzir regressões no laboratório Git.
+
+## Entrega
+
+- E1: docs/E1-diagnostico.md e evidencias/diagnostico-inicial.txt.
+- E2: CONTRIBUTING.md.
+- E3: .github/CODEOWNERS, evidencias/protecao-main.json e docs/E3-protecao.md.
+- E4: .github/workflows/ci.yml, docs/E4-metodo.md, docs/E4-resultados.md e artefatos reais do Actions.
+- E5: scripts/laboratorio.mjs, docs/E5-laboratorio.md e evidencias/laboratorio-git.txt.
+- E6: docs/E6-parecer.md.
+- Plano para transcrever nos seis campos da prática: docs/planos-HTML.txt. Não altera o questionário.
+
+## Limitações a conferir antes do envio
+
+A merge queue depende de organização elegível; conta pessoal não é compatível. PR escrito por agente fica aberto para revisão humana, sem autoaprovação ou integração. É necessário revisor humano distinto do autor e com escrita no repositório. Os prints reais das configurações estão em evidencias/protecao-main.png e evidencias/protecao-main-checks.png. JSON de configuração é evidência técnica complementar. As evidências de revisão devem ser acrescentadas quando houver revisão humana.
+
+
+
+========================================================================
+docs/E1-diagnostico.md
+========================================================================
+# E1 — Diagnóstico do repositório e fluxo
+
+Este é um repositório de laboratório criado para a atividade. Sua main inicial contém apenas o README gerado pelo GitHub. Não há evidência do histórico da empresa fictícia, de branches com semanas ou de quarenta PRs semanais: esses números são premissas do enunciado, não medições deste repositório.
+
+O arquivo evidencias/diagnostico-inicial.txt registra git count-objects -vH, referências e datas dos commits antes da primeira publicação da implementação. Na coleta inicial há uma branch local de trabalho e a referência remota da main. Ambas são recém-criadas. As datas permitem verificar a idade real; a política passa a limitar branches a dois dias úteis. As referências locais/remotas apontando ao mesmo commit não devem ser contadas como duas branches do servidor.
+
+A consulta posterior em evidencias/branches-remotas.json identifica as branches reais do GitHub. A coleta final de objetos e histórico está em evidencias/diagnostico-final.txt. O tamanho de objetos Git não equivale ao tamanho de todos os arquivos da cópia de trabalho e não inclui arquivos ainda não commitados. O checkout inicial de CI ainda não existia na primeira coleta; a comparação controlada no mesmo commit consta em docs/E4-resultados.md, com três execuções de cada configuração.
+
+O conflito real reproduzido no E5 surge porque duas branches alteram a mesma linha da política. No cenário empresarial, branches longas, alterações concorrentes em arquivos compartilhados e PRs grandes são hipóteses de causa, a validar observando PRs e ocorrências. Prioridade: reduzir idade das branches, limitar o escopo dos PRs e encaminhar revisão por pasta. Acompanhar conflitos por PR e tempo até integração por duas semanas, sem atribuir resultados produtivos a este experimento.
+
+Limite: não foi possível demonstrar melhora de lead time ou taxa de conflito real em um projeto recém-criado. A medição de checkout existe separadamente no E4 e não implica melhora estatisticamente significativa.
+
+
+========================================================================
+CONTRIBUTING.md
+========================================================================
+# Política de contribuição — Carparts
+
+Usamos trunk-based development: main é o tronco estável. Cada tarefa usa uma branch curta, com no máximo dois dias úteis de vida. Se ultrapassar, dividir o escopo ou usar feature flag; revisar diariamente branches abertas. Não criar develop permanente. Nomes: feat/reserva-estoque, fix/validacao-quantidade e docs/politica-git.
+
+Commits seguem Conventional Commits: feat(api): adiciona reserva de estoque; fix(api): recusa quantidade negativa; docs: documenta revisão. Um commit deve ter uma intenção verificável. O changelog pode ser elaborado a partir desses prefixos; não foi implantada automação de release neste laboratório.
+
+## Fluxo obrigatório
+
+1. Criar branch a partir da main atualizada. Fazer commits pequenos e rodar npm test.
+2. Atualizar a branch por rebase apenas enquanto ela for pessoal e não tiver sido compartilhada. Branch publicada: atualizar por merge, sem reescrever histórico. Havendo colaboração, nunca usar reset --hard ou push --force.
+3. Abrir PR com objetivo, evidência dos testes, riscos e plano de reversão. Todo PR de agente deve declarar a autoria assistida e receber revisão humana registrada por pessoa diferente do autor do PR.
+4. Exigir CI, uma aprovação, aprovação de CODEOWNERS e resolução de conversas. Mudanças posteriores invalidam a aprovação anterior. A pasta prompts/ exige revisão de seu proprietário.
+5. Integrar pela merge queue quando o repositório estiver em organização compatível. Nesta conta pessoal, a fila não é disponível: usar PR atualizado com main e checagens obrigatórias, com integração humana. Isso é limitação, não equivalência com a fila.
+6. Desfazer mudanças na main por git revert em nova branch e novo PR. Nunca dar push direto na main.
+
+## Autoria e revisão neste laboratório
+
+A conta disponível é a única proprietária de código. O agente usa essa mesma conta para abrir o PR; por isso ela não pode aprovar o próprio PR. Antes da integração, convidar outro colaborador humano com permissão de escrita, incluir seu usuário real no CODEOWNERS via PR e obter sua aprovação. Não simular identidades ou aprovações. O CODEOWNERS novo só passa a governar a main depois de integrado; o bootstrap é protegido pela aprovação geral exigida.
+
+## Segurança
+
+Não versionar tokens, senhas ou .env, nem temporariamente. .gitignore não remove segredos já versionados. Revogar qualquer credencial exposta. Usar Secrets do GitHub Actions quando necessário; este laboratório não precisa deles. Histórico compartilhado nunca é reescrito.
+
+## Implantação em duas semanas
+
+Dias 1–2: diagnóstico e coleta inicial. Dias 3–5: política, proteção e responsáveis. Dias 6–8: checkout enxuto e três medições por configuração. Dias 9–10: laboratório, parecer e revisão dos indicadores. Medir idade das branches, conflitos/PR, duração de checkout e tempo até integração. O cenário informa meta de lead time de dois dias; este repositório novo não demonstra essa redução.
+
+
+
+========================================================================
+docs/E3-protecao.md
+========================================================================
+# E3 — Proteção da main e revisão
+
+A main foi protegida pela API do GitHub antes da publicação da implementação. Evidência: evidencias/protecao-main.json, capturada de volta do servidor, e não apenas um exemplo de configuração.
+
+Regras: PR obrigatório, uma aprovação, aprovação de CODEOWNERS, invalidação de aprovação antiga, aprovação da última atualização por outra pessoa, checagem CI, branch atualizada, conversas resolvidas, histórico linear, administradores sujeitos às regras, force push e exclusão de branch bloqueados.
+
+O README inicial foi criado pela opção auto_init do GitHub ao criar o repositório vazio. Essa é a inicialização do laboratório. Depois disso a implementação foi enviada apenas à branch feat/pratica-git-scion e apresentada em PR. Não houve push direto de implementação à main nem integração de PR de agente sem revisão.
+
+O CODEOWNERS por pasta está em .github/CODEOWNERS e inclui prompts/. Como é um arquivo novo no PR, ele só regerá a main após integração. A proteção geral por aprovação já está ativa. A conta pessoal disponível foi usada como proprietária provisória; o autor de PR não pode aprovar o próprio PR. Convidar outro colaborador humano com escrita, incluir seu usuário real no CODEOWNERS e registrar sua revisão antes de integrar. O agente não representa essa revisão.
+
+Merge queue: indisponível em repositório pertencente a conta pessoal, conforme documentação do GitHub. Não foi criada organização nem simulada fila. Para atender integralmente a E3, transferir para organização elegível e ativar a opção “Require merge queue” na regra da main. O workflow já possui merge_group, mas o evento ainda não foi exercitado neste ambiente.
+
+Prints reais da configuração foram capturados em evidencias/protecao-main.png e evidencias/protecao-main-checks.png. A evidência JSON é complementar. A revisão humana ainda precisa acontecer: anexar sua comprovação quando existir. Não há print de fila ativa, pois o recurso está indisponível. O laboratório permanece com essa parte do requisito pendente.
+
+Fonte: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue
+
+
+========================================================================
+docs/E4-metodo.md
+========================================================================
+# E4 — Método de comparação
+
+O mesmo commit é submetido a dois tratamentos: checkout completo com fetch-depth 0 e checkout enxuto com fetch-depth 1 mais sparse-checkout de apps/api e tests. Cada tratamento roda três vezes em jobs ubuntu-latest independentes, sem cache persistente controlado. O número de commits varia no tratamento completo, não o conteúdo de origem. As pastas de documentação e prompts são omitidas na cópia enxuta; arquivos da raiz são incluídos pelo modo cone, incluindo package.json.
+
+A comparação é pareada por commit, com três execuções por configuração, e não uma série histórica do projeto original da Carparts. Cronômetro: timestamp imediatamente antes do checkout até imediatamente depois, incluindo inicialização e intervalo entre steps. Os artefatos CSV guardam esse tempo; a API do GitHub fornece também tempo do step e tempo total de job, com resolução de segundos. Não confundir essas medidas.
+
+O filtro paths seleciona mudanças relevantes ao laboratório. Ao adicionar outra pasta ou arquivo executável, atualizar o filtro antes da mudança: um workflow inteiramente ignorado pode deixar a checagem obrigatória pendente. Em merge_group o workflow roda sem filtro de caminhos. Não foi adicionado cache de dependências porque não há dependências externas para instalar.
+
+Este repositório é pequeno e novo. Não se promete ganho: inicialização, rede e variação dos runners podem superar qualquer economia. Os CSV e as conclusões só devem declarar os resultados efetivamente observados. O histórico completo continua disponível no ambiente de investigação para bisect, blame e diagnóstico.
+
+
+
+========================================================================
+docs/E4-resultados.md
+========================================================================
+# E4 — Resultados reais do checkout
+
+Execução: https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462793595
+Commit de origem do PR: 35ae81e9757a69618ced4e729dea767c8646b37f
+Conclusão: success. Três execuções por configuração, todas no mesmo workflow e no mesmo commit. O GitHub testa a referência de merge do PR; o head_sha identifica a origem da mudança. Consulte o log de checkout para o SHA efetivamente materializado.
+
+| Configuração | Amostra | Cronômetro checkout (s) | Step API (s) | Job total API (s) |
+|---|---:|---:|---:|---:|
+| completo | 1 | 1.321695 | 1 | 7 |
+| completo | 2 | 0.879228 | 1 | 7 |
+| completo | 3 | 0.846511 | 1 | 6 |
+| enxuto | 1 | 1.272155 | 1 | 6 |
+| enxuto | 2 | 1.325985 | 1 | 6 |
+| enxuto | 3 | 1.403457 | 1 | 7 |
+
+Média completo: **1.015811 s**. Média enxuto: **1.333866 s**. O checkout enxuto foi **31.3% mais lento** nesta amostra. Os tempos de job também estão acima para não confundir checkout com duração total da execução. A API tem resolução de segundos; o cronômetro mede também pequenos intervalos entre steps. Não se deve interpretar casas decimais como precisão experimental ou generalizar três amostras.
+
+Conclusão: não houve ganho observado de tempo com o checkout enxuto neste laboratório pequeno. O custo de sparse-checkout e a variação entre runners podem superar a economia de dados. A otimização está configurada para o monorepo do cenário, mas deve ser reavaliada com histórico e volume reais. Não foi demonstrada redução do lead time da Carparts. Os CSV brutos e os relatórios de objetos estão em evidencias/metricas, e os ZIP originais em evidencias/artefatos.
+
+A execução inicial, anterior à atualização das versões das Actions, está preservada em evidencias/execucao-inicial. Não misturar suas amostras com as da execução indicada acima.
+
+
+
+========================================================================
+docs/E5-laboratorio.md
+========================================================================
+# E5 — Laboratório de conflito, rebase, revert e bisect
+
+O script scripts/laboratorio.mjs cria um repositório Git temporário isolado e preserva sua pasta para inspeção. Execute node scripts/laboratorio.mjs na raiz do projeto. O log já produzido nesta entrega está em evidencias/laboratorio-git.txt. Cada comando registra sua saída real; o script interrompe ao receber código inesperado ou se a verificação falhar. O histórico também foi exportado para evidencias/laboratorio.bundle; pode ser inspecionado com git clone evidencias/laboratorio.bundle laboratorio-reproduzido, sem depender da pasta temporária original.
+
+1. Conflito/rebase: main e feat/branch-curta alteram a mesma linha de politica.txt de cinco dias para três e dois dias. O rebase da branch pessoal encontra conflito real. O script registra status e diff, grava a resolução de dois dias, adiciona o arquivo e continua o rebase. A integração local é fast-forward. Nenhuma dessas branches foi publicada.
+2. Revert: um commit na main local adiciona temporario.txt. git revert --no-edit cria um novo commit de reversão. O script verifica que o arquivo deixou de existir, mantendo todos os commits no histórico. No repositório GitHub, qualquer reversão deverá ser encaminhada por branch e PR.
+3. Bisect: cria função de reserva correta e teste de limite; insere propositalmente o bug que troca <= por <. Commits de documentação tornam a busca não trivial. git bisect run node teste.cjs executa o teste e identifica o primeiro commit ruim. O script verifica o hash retornado em refs/bisect/bad contra o hash conhecido do bug, registra bisect log, encerra a busca, reverte a regressão e confirma que o teste voltou a passar.
+
+Não há push no script, uso de push --force ou reset --hard. A identidade de laboratório está identificada como didática e não simula uma pessoa revisora. O teste falhar durante o bisect é comportamento esperado: fornece o sinal utilizado na busca binária.
+
+
+========================================================================
+docs/E6-parecer.md
+========================================================================
+# Parecer técnico — Scion e Carparts
+
+Scion é o controle de versão interno desenvolvido pela Anthropic para seu monorepo e seus agentes sempre conectados. Centraliza operações no servidor, grava alterações incrementais e entrega apenas os dados solicitados. O uso de objetos imutáveis endereçados por conteúdo permite reaproveitamento por caches. Esses conceitos procuram reduzir o custo de transportar e manter cópias completas em uma carga excepcional de automação. A descrição técnica e as avaliações de desempenho são relatos da própria empresa, sem reprodução independente neste laboratório.
+
+A Carparts do enunciado trabalha com uma equipe de cinco pessoas e aproximadamente quarenta PRs por semana. Não tem a mesma necessidade operacional nem justificativa para construir serviços de versionamento, armazenamento, revisão e CI próprios. A Anthropic ressalta que Scion não é um substituto adequado para o uso geral de Git. Neste trabalho ele é uma referência arquitetural: não foi instalado nem tratado como produto disponível. A decisão é manter Git, GitHub e GitHub Actions.
+
+Três ideias foram adaptadas. Primeira: materializar somente os dados necessários. O workflow usa clone raso e sparse-checkout, e mede três execuções por configuração no mesmo commit. A interpretação do resultado está no E4 e deve considerar que um laboratório novo pode não apresentar economia. Segunda: reduzir o custo de integrar mudanças pequenas. CONTRIBUTING.md define trunk-based development e branches de até dois dias úteis, para reduzir divergência e conflitos. O E1 mede idade e quantidade de branches, mas não atribui ao laboratório o volume histórico descrito no cenário. Terceira: diferenciar revisão conforme a responsabilidade do código. CODEOWNERS estabelece responsáveis por pasta, com atenção a prompts/, e a proteção exige revisão humana e CI. A fila do GitHub seria uma adaptação viável à escala da Carparts, mas está indisponível em repositório de conta pessoal; sua ativação depende de migrar para organização elegível. O próprio Scion não depende de uma fila global igual à do GitHub.
+
+As medidas reais deste trabalho não demonstram queda do lead time de onze para dois dias. Essa é uma meta do cenário a avaliar posteriormente. A entrega separa configurações implantadas, medições verificáveis e pendências de colaboração humana ou plano do GitHub.
+
+Fonte primária: Anthropic, “Redesigning source control at Anthropic”, publicada em 13/10/2026 e atualizada em 15/10/2026. https://www.anthropic.com/engineering/redesigning-source-control — consulta em 27/10/2026.
+
+Disponibilidade da fila: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue
+
+

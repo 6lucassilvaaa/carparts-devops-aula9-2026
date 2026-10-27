@@ -1,0 +1,125 @@
+{
+  "total_count": 6,
+  "artifacts": [
+    {
+      "id": 12715227402,
+      "node_id": "MDg6QXJ0aWZhY3QxMjcxNTIyNzQwMg==",
+      "name": "checkout-completo-1",
+      "size_in_bytes": 411,
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12715227402",
+      "archive_download_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12715227402/zip",
+      "expired": false,
+      "digest": "sha256:ccd4dedd76b2fbd1248e5f07b6c8f84739c8379837793c9406d7dbb8a10489ae",
+      "created_at": "2026-10-27T06:43:33Z",
+      "updated_at": "2026-10-27T06:43:33Z",
+      "expires_at": "2027-01-25T06:43:26Z",
+      "workflow_run": {
+        "id": 40462793595,
+        "repository_id": 1435348405,
+        "head_repository_id": 1435348405,
+        "head_branch": "feat/pratica-git-scion",
+        "head_sha": "35ae81e9757a69618ced4e729dea767c8646b37f"
+      }
+    },
+    {
+      "id": 12714963800,
+      "node_id": "MDg6QXJ0aWZhY3QxMjcxNDk2MzgwMA==",
+      "name": "checkout-enxuto-1",
+      "size_in_bytes": 403,
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12714963800",
+      "archive_download_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12714963800/zip",
+      "expired": false,
+      "digest": "sha256:d91623cb67825bd7d28f15f0b91294591efeca465e9c1a4365cebde4cec45cc2",
+      "created_at": "2026-10-27T06:43:33Z",
+      "updated_at": "2026-10-27T06:43:33Z",
+      "expires_at": "2027-01-25T06:43:26Z",
+      "workflow_run": {
+        "id": 40462793595,
+        "repository_id": 1435348405,
+        "head_repository_id": 1435348405,
+        "head_branch": "feat/pratica-git-scion",
+        "head_sha": "35ae81e9757a69618ced4e729dea767c8646b37f"
+      }
+    },
+    {
+      "id": 12714879129,
+      "node_id": "MDg6QXJ0aWZhY3QxMjcxNDg3OTEyOQ==",
+      "name": "checkout-completo-2",
+      "size_in_bytes": 411,
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12714879129",
+      "archive_download_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12714879129/zip",
+      "expired": false,
+      "digest": "sha256:5adea61ca435d941053e4bdf6cd1ec5e2f037845c31cf3c6bf630a2d2549e88b",
+      "created_at": "2026-10-27T06:43:33Z",
+      "updated_at": "2026-10-27T06:43:33Z",
+      "expires_at": "2027-01-25T06:43:26Z",
+      "workflow_run": {
+        "id": 40462793595,
+        "repository_id": 1435348405,
+        "head_repository_id": 1435348405,
+        "head_branch": "feat/pratica-git-scion",
+        "head_sha": "35ae81e9757a69618ced4e729dea767c8646b37f"
+      }
+    },
+    {
+      "id": 12714869172,
+      "node_id": "MDg6QXJ0aWZhY3QxMjcxNDg2OTE3Mg==",
+      "name": "checkout-enxuto-3",
+      "size_in_bytes": 403,
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12714869172",
+      "archive_download_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12714869172/zip",
+      "expired": false,
+      "digest": "sha256:debdfb0bfa19c2cc92ca98118261bdef0e3e35fbc2f6824807f8ed0ff0af1435",
+      "created_at": "2026-10-27T06:43:33Z",
+      "updated_at": "2026-10-27T06:43:33Z",
+      "expires_at": "2027-01-25T06:43:26Z",
+      "workflow_run": {
+        "id": 40462793595,
+        "repository_id": 1435348405,
+        "head_repository_id": 1435348405,
+        "head_branch": "feat/pratica-git-scion",
+        "head_sha": "35ae81e9757a69618ced4e729dea767c8646b37f"
+      }
+    },
+    {
+      "id": 12714818277,
+      "node_id": "MDg6QXJ0aWZhY3QxMjcxNDgxODI3Nw==",
+      "name": "checkout-completo-3",
+      "size_in_bytes": 411,
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12714818277",
+      "archive_download_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12714818277/zip",
+      "expired": false,
+      "digest": "sha256:c86ee003c67238a129a2d9ee3c24deae8ed2df1461c3627d126cfff263f6658a",
+      "created_at": "2026-10-27T06:43:32Z",
+      "updated_at": "2026-10-27T06:43:32Z",
+      "expires_at": "2027-01-25T06:43:26Z",
+      "workflow_run": {
+        "id": 40462793595,
+        "repository_id": 1435348405,
+        "head_repository_id": 1435348405,
+        "head_branch": "feat/pratica-git-scion",
+        "head_sha": "35ae81e9757a69618ced4e729dea767c8646b37f"
+      }
+    },
+    {
+      "id": 12714349204,
+      "node_id": "MDg6QXJ0aWZhY3QxMjcxNDM0OTIwNA==",
+      "name": "checkout-enxuto-2",
+      "size_in_bytes": 403,
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12714349204",
+      "archive_download_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/artifacts/12714349204/zip",
+      "expired": false,
+      "digest": "sha256:5fba9920620d2b701315911438b49e28b5427ecacaa8d7c3a59712f0ff002b1a",
+      "created_at": "2026-10-27T06:43:33Z",
+      "updated_at": "2026-10-27T06:43:33Z",
+      "expires_at": "2027-01-25T06:43:26Z",
+      "workflow_run": {
+        "id": 40462793595,
+        "repository_id": 1435348405,
+        "head_repository_id": 1435348405,
+        "head_branch": "feat/pratica-git-scion",
+        "head_sha": "35ae81e9757a69618ced4e729dea767c8646b37f"
+      }
+    }
+  ]
+}

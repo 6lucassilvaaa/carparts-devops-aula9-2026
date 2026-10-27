@@ -1,0 +1,23 @@
+Coleta UTC: 2026-10-27T06:45:01.674Z
+Snapshot anterior ao commit final de documentação; objetos incluem as evidências anteriores, não alterações ainda não commitadas.
+$ git count-objects -vH
+count: 79
+size: 249.19 KiB
+in-pack: 0
+packs: 0
+size-pack: 0 bytes
+prune-packable: 0
+garbage: 0
+size-garbage: 0 bytes
+$ git branch -a
+* feat/pratica-git-scion
+  remotes/origin/feat/pratica-git-scion
+  remotes/origin/main
+$ git for-each-ref --format=%(refname:short) | %(committerdate:iso-strict)
+feat/pratica-git-scion | 2026-10-27T03:43:19-03:00
+origin/feat/pratica-git-scion | 2026-10-27T03:43:19-03:00
+origin/main | 2026-10-27T03:38:26-03:00
+$ git log --all --format=%h %aI %s
+35ae81e 2026-10-27T03:43:19-03:00 fix(ci): atualiza Actions e documenta evidencias reais
+35fe120 2026-10-27T03:40:08-03:00 feat(devops): implementa pratica de Git e Scion
+13f1b61 2026-10-27T03:38:26-03:00 Initial commit

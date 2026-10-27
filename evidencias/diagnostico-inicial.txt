@@ -1,0 +1,17 @@
+Coleta UTC: 2026-10-27T06:38:52.831Z
+Repositório novo; main contém somente README criado pela inicialização do GitHub.
+$ git count-objects -vH
+count: 3
+size: 1004 bytes
+in-pack: 0
+packs: 0
+size-pack: 0 bytes
+prune-packable: 0
+garbage: 0
+size-garbage: 0 bytes
+$ git for-each-ref --format=%(refname:short) | %(committerdate:iso-strict)
+feat/pratica-git-scion | 2026-10-27T03:38:26-03:00
+origin/main | 2026-10-27T03:38:26-03:00
+$ git log --all --format=%h %aI %s
+13f1b61 2026-10-27T03:38:26-03:00 Initial commit
+CI inicial: ainda não executado. Histórico operacional: indisponível, laboratório novo.
