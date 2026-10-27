@@ -1,0 +1,43 @@
+[
+  {
+    "name": "feat/pratica-git-scion",
+    "commit": {
+      "sha": "35fe1208d45dfc4ab468d1baa4165d66d7d4b008",
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/commits/35fe1208d45dfc4ab468d1baa4165d66d7d4b008"
+    },
+    "protected": false,
+    "protection": {
+      "enabled": false,
+      "required_status_checks": {
+        "enforcement_level": "off",
+        "contexts": [],
+        "checks": []
+      }
+    },
+    "protection_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/branches/feat/pratica-git-scion/protection"
+  },
+  {
+    "name": "main",
+    "commit": {
+      "sha": "13f1b614eccbd7f558986f4d66483ef15995eb13",
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/commits/13f1b614eccbd7f558986f4d66483ef15995eb13"
+    },
+    "protected": true,
+    "protection": {
+      "enabled": true,
+      "required_status_checks": {
+        "enforcement_level": "everyone",
+        "contexts": [
+          "CI"
+        ],
+        "checks": [
+          {
+            "context": "CI",
+            "app_id": null
+          }
+        ]
+      }
+    },
+    "protection_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/branches/main/protection"
+  }
+]

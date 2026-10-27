@@ -1,0 +1,699 @@
+{
+  "id": 40462480620,
+  "status": "completed",
+  "conclusion": "success",
+  "html_url": "https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620",
+  "head_sha": "35fe1208d45dfc4ab468d1baa4165d66d7d4b008",
+  "created_at": "2026-10-27T06:40:16Z",
+  "updated_at": "2026-10-27T06:40:41Z",
+  "jobs": [
+    {
+      "id": 122050082830,
+      "run_id": 40462480620,
+      "workflow_name": "Carparts CI",
+      "head_branch": "feat/pratica-git-scion",
+      "run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVY2ttc8AAAAcasB4Dg",
+      "head_sha": "35fe1208d45dfc4ab468d1baa4165d66d7d4b008",
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/jobs/122050082830",
+      "html_url": "https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050082830",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T06:40:17Z",
+      "started_at": "2026-10-27T06:40:20Z",
+      "completed_at": "2026-10-27T06:40:24Z",
+      "name": "Testes",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-27T06:40:20Z",
+          "completed_at": "2026-10-27T06:40:21Z"
+        },
+        {
+          "name": "Checkout enxuto",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-27T06:40:21Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Run npm test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Post Checkout enxuto",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/check-runs/122050082830",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000015,
+      "runner_name": "GitHub Actions 1000000015",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 122050083082,
+      "run_id": 40462480620,
+      "workflow_name": "Carparts CI",
+      "head_branch": "feat/pratica-git-scion",
+      "run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVY2ttc8AAAAcasB5Cg",
+      "head_sha": "35fe1208d45dfc4ab468d1baa4165d66d7d4b008",
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/jobs/122050083082",
+      "html_url": "https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083082",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T06:40:17Z",
+      "started_at": "2026-10-27T06:40:20Z",
+      "completed_at": "2026-10-27T06:40:27Z",
+      "name": "Checkout enxuto 3",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-27T06:40:21Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Iniciar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Checkout completo",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 3,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Checkout enxuto",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Registrar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:25Z"
+        },
+        {
+          "name": "Post Checkout enxuto",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-27T06:40:25Z",
+          "completed_at": "2026-10-27T06:40:25Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-27T06:40:25Z",
+          "completed_at": "2026-10-27T06:40:25Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/check-runs/122050083082",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000016,
+      "runner_name": "GitHub Actions 1000000016",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 122050083118,
+      "run_id": 40462480620,
+      "workflow_name": "Carparts CI",
+      "head_branch": "feat/pratica-git-scion",
+      "run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVY2ttc8AAAAcasB5Lg",
+      "head_sha": "35fe1208d45dfc4ab468d1baa4165d66d7d4b008",
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/jobs/122050083118",
+      "html_url": "https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083118",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T06:40:17Z",
+      "started_at": "2026-10-27T06:40:20Z",
+      "completed_at": "2026-10-27T06:40:25Z",
+      "name": "Checkout completo 1",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-27T06:40:20Z",
+          "completed_at": "2026-10-27T06:40:21Z"
+        },
+        {
+          "name": "Iniciar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-27T06:40:21Z",
+          "completed_at": "2026-10-27T06:40:21Z"
+        },
+        {
+          "name": "Checkout completo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-27T06:40:21Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Checkout enxuto",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Registrar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Post Checkout completo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/check-runs/122050083118",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000017,
+      "runner_name": "GitHub Actions 1000000017",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 122050083175,
+      "run_id": 40462480620,
+      "workflow_name": "Carparts CI",
+      "head_branch": "feat/pratica-git-scion",
+      "run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVY2ttc8AAAAcasB5Zw",
+      "head_sha": "35fe1208d45dfc4ab468d1baa4165d66d7d4b008",
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/jobs/122050083175",
+      "html_url": "https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083175",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T06:40:17Z",
+      "started_at": "2026-10-27T06:40:21Z",
+      "completed_at": "2026-10-27T06:40:28Z",
+      "name": "Checkout enxuto 2",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Iniciar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Checkout completo",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 3,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Checkout enxuto",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:24Z"
+        },
+        {
+          "name": "Registrar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-27T06:40:24Z",
+          "completed_at": "2026-10-27T06:40:24Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-27T06:40:24Z",
+          "completed_at": "2026-10-27T06:40:25Z"
+        },
+        {
+          "name": "Post Checkout enxuto",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-27T06:40:25Z",
+          "completed_at": "2026-10-27T06:40:26Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-27T06:40:26Z",
+          "completed_at": "2026-10-27T06:40:26Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/check-runs/122050083175",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000018,
+      "runner_name": "GitHub Actions 1000000018",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 122050083177,
+      "run_id": 40462480620,
+      "workflow_name": "Carparts CI",
+      "head_branch": "feat/pratica-git-scion",
+      "run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVY2ttc8AAAAcasB5aQ",
+      "head_sha": "35fe1208d45dfc4ab468d1baa4165d66d7d4b008",
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/jobs/122050083177",
+      "html_url": "https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083177",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T06:40:17Z",
+      "started_at": "2026-10-27T06:40:20Z",
+      "completed_at": "2026-10-27T06:40:25Z",
+      "name": "Checkout completo 2",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-27T06:40:21Z",
+          "completed_at": "2026-10-27T06:40:21Z"
+        },
+        {
+          "name": "Iniciar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-27T06:40:21Z",
+          "completed_at": "2026-10-27T06:40:21Z"
+        },
+        {
+          "name": "Checkout completo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-27T06:40:21Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Checkout enxuto",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Registrar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Post Checkout completo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:24Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-27T06:40:24Z",
+          "completed_at": "2026-10-27T06:40:24Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/check-runs/122050083177",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000019,
+      "runner_name": "GitHub Actions 1000000019",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 122050083219,
+      "run_id": 40462480620,
+      "workflow_name": "Carparts CI",
+      "head_branch": "feat/pratica-git-scion",
+      "run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVY2ttc8AAAAcasB5kw",
+      "head_sha": "35fe1208d45dfc4ab468d1baa4165d66d7d4b008",
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/jobs/122050083219",
+      "html_url": "https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083219",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T06:40:17Z",
+      "started_at": "2026-10-27T06:40:20Z",
+      "completed_at": "2026-10-27T06:40:25Z",
+      "name": "Checkout enxuto 1",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-27T06:40:20Z",
+          "completed_at": "2026-10-27T06:40:21Z"
+        },
+        {
+          "name": "Iniciar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-27T06:40:21Z",
+          "completed_at": "2026-10-27T06:40:21Z"
+        },
+        {
+          "name": "Checkout completo",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 3,
+          "started_at": "2026-10-27T06:40:21Z",
+          "completed_at": "2026-10-27T06:40:21Z"
+        },
+        {
+          "name": "Checkout enxuto",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-27T06:40:21Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Registrar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:22Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-27T06:40:22Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Post Checkout enxuto",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-27T06:40:23Z",
+          "completed_at": "2026-10-27T06:40:23Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/check-runs/122050083219",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000020,
+      "runner_name": "GitHub Actions 1000000020",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 122050083296,
+      "run_id": 40462480620,
+      "workflow_name": "Carparts CI",
+      "head_branch": "feat/pratica-git-scion",
+      "run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVY2ttc8AAAAcasB54A",
+      "head_sha": "35fe1208d45dfc4ab468d1baa4165d66d7d4b008",
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/jobs/122050083296",
+      "html_url": "https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083296",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T06:40:17Z",
+      "started_at": "2026-10-27T06:40:30Z",
+      "completed_at": "2026-10-27T06:40:34Z",
+      "name": "Checkout completo 3",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-27T06:40:30Z",
+          "completed_at": "2026-10-27T06:40:31Z"
+        },
+        {
+          "name": "Iniciar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-27T06:40:31Z",
+          "completed_at": "2026-10-27T06:40:31Z"
+        },
+        {
+          "name": "Checkout completo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-27T06:40:31Z",
+          "completed_at": "2026-10-27T06:40:32Z"
+        },
+        {
+          "name": "Checkout enxuto",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-10-27T06:40:32Z",
+          "completed_at": "2026-10-27T06:40:32Z"
+        },
+        {
+          "name": "Registrar medicao",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-27T06:40:32Z",
+          "completed_at": "2026-10-27T06:40:32Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-27T06:40:32Z",
+          "completed_at": "2026-10-27T06:40:33Z"
+        },
+        {
+          "name": "Post Checkout completo",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-27T06:40:33Z",
+          "completed_at": "2026-10-27T06:40:33Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-27T06:40:33Z",
+          "completed_at": "2026-10-27T06:40:33Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/check-runs/122050083296",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000021,
+      "runner_name": "GitHub Actions 1000000021",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 122050176668,
+      "run_id": 40462480620,
+      "workflow_name": "Carparts CI",
+      "head_branch": "feat/pratica-git-scion",
+      "run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVY2ttc8AAAAcasHmnA",
+      "head_sha": "35fe1208d45dfc4ab468d1baa4165d66d7d4b008",
+      "url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/actions/jobs/122050176668",
+      "html_url": "https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050176668",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-27T06:40:35Z",
+      "started_at": "2026-10-27T06:40:37Z",
+      "completed_at": "2026-10-27T06:40:40Z",
+      "name": "CI",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-27T06:40:38Z",
+          "completed_at": "2026-10-27T06:40:38Z"
+        },
+        {
+          "name": "Exigir todos os jobs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-27T06:40:38Z",
+          "completed_at": "2026-10-27T06:40:38Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-27T06:40:38Z",
+          "completed_at": "2026-10-27T06:40:38Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/6lucassilvaaa/carparts-devops-aula9-2026/check-runs/122050176668",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000022,
+      "runner_name": "GitHub Actions 1000000022",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

@@ -10,6 +10,6 @@ O CODEOWNERS por pasta está em .github/CODEOWNERS e inclui prompts/. Como é um
 
 Merge queue: indisponível em repositório pertencente a conta pessoal, conforme documentação do GitHub. Não foi criada organização nem simulada fila. Para atender integralmente a E3, transferir para organização elegível e ativar a opção “Require merge queue” na regra da main. O workflow já possui merge_group, mas o evento ainda não foi exercitado neste ambiente.
 
-Prints: evidência JSON é complementar. Capturar manualmente a página Settings > Branches > main e a página do PR mostrando as checagens e a revisão real quando ela existir. Não substituir prints por imagens fabricadas ou afirmar fila ativa. O laboratório permanece com essa parte do requisito pendente.
+Prints reais da configuração foram capturados em evidencias/protecao-main.png e evidencias/protecao-main-checks.png. A evidência JSON é complementar. A revisão humana ainda precisa acontecer: anexar sua comprovação quando existir. Não há print de fila ativa, pois o recurso está indisponível. O laboratório permanece com essa parte do requisito pendente.
 
 Fonte: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue

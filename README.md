@@ -18,5 +18,5 @@ Requer Node.js 22 ou posterior e Git. Execute npm test. Não há instalação de
 
 ## Limitações a conferir antes do envio
 
-A merge queue depende de organização elegível; conta pessoal não é compatível. PR escrito por agente fica aberto para revisão humana, sem autoaprovação ou integração. É necessário revisor humano distinto do autor e com escrita no repositório. Screenshots de configurações autenticadas, se não disponíveis nesta execução, devem ser capturados pelo aluno. JSON de configuração é evidência técnica complementar, não um print.
+A merge queue depende de organização elegível; conta pessoal não é compatível. PR escrito por agente fica aberto para revisão humana, sem autoaprovação ou integração. É necessário revisor humano distinto do autor e com escrita no repositório. Os prints reais das configurações estão em evidencias/protecao-main.png e evidencias/protecao-main-checks.png. JSON de configuração é evidência técnica complementar. As evidências de revisão devem ser acrescentadas quando houver revisão humana.
 
