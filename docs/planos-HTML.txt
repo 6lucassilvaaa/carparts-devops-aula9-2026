@@ -1,0 +1,17 @@
+E1 — Diagnóstico do repositório e do fluxo atual
+Vou apresentar o diagnóstico real do laboratório Carparts com a saída de git count-objects -vH, referências das branches e datas dos commits. Anexarei os arquivos de evidência e a análise das causas de conflito, distinguindo o cenário fictício das medições disponíveis.
+
+E2 — Estratégia de branches e convenção de commits
+Vou entregar o CONTRIBUTING.md com trunk-based development, branches de até dois dias úteis, exemplos de nomes e Conventional Commits. O documento inclui regras para agentes, revisão humana obrigatória e proibição de reescrever histórico compartilhado, com fluxo de reversão por PR.
+
+E3 — Proteção da main, CODEOWNERS e merge queue
+Vou anexar a configuração real da proteção da main e o CODEOWNERS por pasta, incluindo prompts. Complementarei com prints das configurações e revisão humana quando disponíveis. A merge queue permanece pendente porque o laboratório pertence a uma conta pessoal e exige organização elegível.
+
+E4 — CI com checkout enxuto e medição de tempo
+Vou apresentar o workflow GitHub Actions com pull_request, merge_group, filtros paths, fetch-depth e sparse-checkout. Serão anexadas três medições de cada configuração no mesmo commit, seus tempos de checkout e job, além da interpretação dos resultados sem prometer ganho em repositório pequeno.
+
+E5 — Laboratório: conflito, rebase, revert e bisect
+Vou anexar o script reproduzível e seu log real, mostrando conflito resolvido durante rebase de branch pessoal, reversão na main local e busca automatizada por bisect run. O script verifica o commit defeituoso e confirma o teste passando depois da correção.
+
+E6 — Parecer técnico: ideias do Scion para a Carparts
+Vou entregar um parecer de uma página sobre o problema resolvido pelo Scion, a escolha de manter Git e três ideias adaptadas: materialização seletiva, mudanças pequenas e revisão por responsabilidade. Citarei a fonte primária e relacionarei as decisões às evidências e limitações do laboratório.

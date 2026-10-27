@@ -1,0 +1,276 @@
+LABORATÓRIO REAL DE GIT
+Data UTC: 2026-10-27T06:38:53.806Z
+Repositório temporário isolado. A main abaixo é LOCAL; nenhum push é realizado.
+Autor: Laboratório Carparts (identidade didática, não aprovação humana).
+
+$ git init -b main
+Initialized empty Git repository in C:/Users/Admin/AppData/Local/Temp/carparts-git-r20NBa/.git/
+
+
+$ git config user.name Laboratorio Carparts
+
+
+$ git config user.email laboratorio@example.invalid
+
+
+$ git add .
+
+warning: in the working copy of 'politica.txt', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m chore: cria base do laboratorio
+[main (root-commit) efe658d] chore: cria base do laboratorio
+ 1 file changed, 1 insertion(+)
+ create mode 100644 politica.txt
+
+
+$ git switch -c feat/branch-curta
+
+Switched to a new branch 'feat/branch-curta'
+
+$ git commit -am feat: reduz prazo das branches
+[feat/branch-curta d3c86c2] feat: reduz prazo das branches
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+warning: in the working copy of 'politica.txt', LF will be replaced by CRLF the next time Git touches it
+
+$ git switch main
+
+Switched to branch 'main'
+
+$ git commit -am docs: atualiza prazo no tronco local
+[main 8b740cf] docs: atualiza prazo no tronco local
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+warning: in the working copy of 'politica.txt', LF will be replaced by CRLF the next time Git touches it
+
+$ git switch feat/branch-curta
+
+Switched to branch 'feat/branch-curta'
+
+COMENTÁRIO: branches não publicadas alteram a mesma linha. O rebase deve parar com conflito.
+$ git rebase main
+Auto-merging politica.txt
+CONFLICT (content): Merge conflict in politica.txt
+
+Rebasing (1/1)error: could not apply d3c86c2... feat: reduz prazo das branches
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+Could not apply d3c86c2... # feat: reduz prazo das branches
+
+$ git status --short
+UU politica.txt
+
+
+$ git diff
+diff --cc politica.txt
+index 5e7f97d,96e57c6..0000000
+--- a/politica.txt
++++ b/politica.txt
+@@@ -1,1 -1,1 +1,5 @@@
+++<<<<<<< HEAD
+ +prazo_branch=3_dias
+++=======
++ prazo_branch=2_dias
+++>>>>>>> d3c86c2 (feat: reduz prazo das branches)
+
+
+$ git add politica.txt
+
+warning: in the working copy of 'politica.txt', LF will be replaced by CRLF the next time Git touches it
+
+RESOLUÇÃO: manter dois dias úteis, conforme política escolhida. Rebase apenas de branch pessoal não publicada.
+$ git -c core.editor=true rebase --continue
+[detached HEAD c786883] feat: reduz prazo das branches
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Successfully rebased and updated refs/heads/feat/branch-curta.
+
+$ git switch main
+
+Switched to branch 'main'
+
+$ git merge --ff-only feat/branch-curta
+Updating 8b740cf..c786883
+Fast-forward
+ politica.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+$ git add .
+
+warning: in the working copy of 'temporario.txt', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m feat: adiciona arquivo para demonstrar revert
+[main 141f441] feat: adiciona arquivo para demonstrar revert
+ 1 file changed, 1 insertion(+)
+ create mode 100644 temporario.txt
+
+
+$ git rev-parse HEAD
+141f441887a09d26667a3e80c8d25e9b493576d7
+
+
+$ git revert --no-edit 141f441887a09d26667a3e80c8d25e9b493576d7
+[main 4e3a1d4] Revert "feat: adiciona arquivo para demonstrar revert"
+ Date: Tue Oct 27 03:38:54 2026 -0300
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 temporario.txt
+
+
+COMENTÁRIO: revert criou outro commit e preservou o histórico da main local. Na main remota, fazer isso via branch e PR.
+$ git add .
+
+warning: in the working copy of 'reserva.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'teste.cjs', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m test: estabelece caso bom para bisect
+[main 234de4e] test: estabelece caso bom para bisect
+ 2 files changed, 5 insertions(+)
+ create mode 100644 reserva.cjs
+ create mode 100644 teste.cjs
+
+
+$ git rev-parse HEAD
+234de4e23a94db69f1b53c422ac3fb80acdaa540
+
+
+$ git add .
+
+warning: in the working copy of 'reserva.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'teste.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'notas.txt', LF will be replaced by CRLF the next time Git touches it
+
+$ git commit -m docs: acrescenta nota A
+[main 51eb39f] docs: acrescenta nota A
+ 1 file changed, 1 insertion(+)
+ create mode 100644 notas.txt
+
+
+$ git commit -am fix: insere propositalmente regressao de limite
+[main c10cf90] fix: insere propositalmente regressao de limite
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+warning: in the working copy of 'notas.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reserva.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'teste.cjs', LF will be replaced by CRLF the next time Git touches it
+
+$ git rev-parse HEAD
+c10cf900ec655ee47c8e9d11b3637df2b2b20d42
+
+
+$ git commit -am docs: acrescenta nota B
+[main a594f90] docs: acrescenta nota B
+ 1 file changed, 1 insertion(+)
+
+warning: in the working copy of 'notas.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reserva.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'teste.cjs', LF will be replaced by CRLF the next time Git touches it
+
+$ git rev-parse HEAD
+a594f90e3d722bf2ca7ed13d001ce56bba7fd602
+
+
+$ git bisect start a594f90e3d722bf2ca7ed13d001ce56bba7fd602 234de4e23a94db69f1b53c422ac3fb80acdaa540
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[c10cf900ec655ee47c8e9d11b3637df2b2b20d42] fix: insere propositalmente regressao de limite
+
+
+$ git bisect run node teste.cjs
+running 'node' 'teste.cjs'
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[51eb39f155d628c42d86684318d930aec8389e5a] docs: acrescenta nota A
+running 'node' 'teste.cjs'
+c10cf900ec655ee47c8e9d11b3637df2b2b20d42 is the first 'bad' commit
+commit c10cf900ec655ee47c8e9d11b3637df2b2b20d42
+Author: Laboratorio Carparts <laboratorio@example.invalid>
+Date:   Tue Oct 27 03:38:54 2026 -0300
+
+    fix: insere propositalmente regressao de limite
+
+ reserva.cjs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+bisect found first 'bad' commit
+
+node:assert:152
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+false !== true
+
+    at Object.<anonymous> (C:\Users\Admin\AppData\Local\Temp\carparts-git-r20NBa\teste.cjs:3:8)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.1
+
+$ git rev-parse refs/bisect/bad
+c10cf900ec655ee47c8e9d11b3637df2b2b20d42
+
+
+$ git bisect log
+# bad: [a594f90e3d722bf2ca7ed13d001ce56bba7fd602] docs: acrescenta nota B
+# good: [234de4e23a94db69f1b53c422ac3fb80acdaa540] test: estabelece caso bom para bisect
+git bisect start 'a594f90e3d722bf2ca7ed13d001ce56bba7fd602' '234de4e23a94db69f1b53c422ac3fb80acdaa540'
+# bad: [c10cf900ec655ee47c8e9d11b3637df2b2b20d42] fix: insere propositalmente regressao de limite
+git bisect bad c10cf900ec655ee47c8e9d11b3637df2b2b20d42
+# good: [51eb39f155d628c42d86684318d930aec8389e5a] docs: acrescenta nota A
+git bisect good 51eb39f155d628c42d86684318d930aec8389e5a
+# first 'bad' commit: [c10cf900ec655ee47c8e9d11b3637df2b2b20d42] fix: insere propositalmente regressao de limite
+
+
+$ git bisect reset
+
+Previous HEAD position was 51eb39f docs: acrescenta nota A
+Switched to branch 'main'
+
+VERIFICAÇÃO: commit encontrado pelo bisect corresponde ao bug inserido: c10cf900ec655ee47c8e9d11b3637df2b2b20d42.
+$ git revert --no-edit c10cf900ec655ee47c8e9d11b3637df2b2b20d42
+[main a27b9de] Revert "fix: insere propositalmente regressao de limite"
+ Date: Tue Oct 27 03:38:55 2026 -0300
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+$ node teste.cjs
+
+
+Exit code: 0
+$ git log --oneline --all --graph
+* a27b9de Revert "fix: insere propositalmente regressao de limite"
+* a594f90 docs: acrescenta nota B
+* c10cf90 fix: insere propositalmente regressao de limite
+* 51eb39f docs: acrescenta nota A
+* 234de4e test: estabelece caso bom para bisect
+* 4e3a1d4 Revert "feat: adiciona arquivo para demonstrar revert"
+* 141f441 feat: adiciona arquivo para demonstrar revert
+* c786883 feat: reduz prazo das branches
+* 8b740cf docs: atualiza prazo no tronco local
+* efe658d chore: cria base do laboratorio
+
+
+$ git count-objects -vH
+count: 31
+size: 3.64 KiB
+in-pack: 0
+packs: 0
+size-pack: 0 bytes
+prune-packable: 0
+garbage: 0
+size-garbage: 0 bytes
+

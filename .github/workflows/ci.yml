@@ -1,0 +1,91 @@
+name: Carparts CI
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'apps/**'
+      - 'libs/**'
+      - 'prompts/**'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'docs/**'
+      - '.github/**'
+      - '*.md'
+      - 'package*.json'
+      - '.gitignore'
+      - '.gitattributes'
+  merge_group:
+    types: [checks_requested]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  testar:
+    name: Testes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout enxuto
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          sparse-checkout: |
+            apps/api
+            tests
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm test
+  medir:
+    name: Checkout ${{ matrix.modo }} ${{ matrix.amostra }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        modo: [completo, enxuto]
+        amostra: [1, 2, 3]
+    steps:
+      - name: Iniciar medicao
+        run: echo "INICIO_NS=$(date +%s%N)" >> "$GITHUB_ENV"
+      - name: Checkout completo
+        if: matrix.modo == 'completo'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Checkout enxuto
+        if: matrix.modo == 'enxuto'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+          sparse-checkout: |
+            apps/api
+            tests
+      - name: Registrar medicao
+        env:
+          MODO: ${{ matrix.modo }}
+          AMOSTRA: ${{ matrix.amostra }}
+        run: |
+          FIM_NS=$(date +%s%N)
+          SEGUNDOS=$(awk "BEGIN {printf \"%.6f\", ($FIM_NS - $INICIO_NS)/1000000000}")
+          mkdir -p metricas
+          printf 'modo,amostra,checkout_segundos\n%s,%s,%s\n' "$MODO" "$AMOSTRA" "$SEGUNDOS" > "metricas/$MODO-$AMOSTRA.csv"
+          git count-objects -vH > "metricas/$MODO-$AMOSTRA-objetos.txt"
+          cat "metricas/$MODO-$AMOSTRA.csv" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: checkout-${{ matrix.modo }}-${{ matrix.amostra }}
+          path: metricas/
+  gate:
+    name: CI
+    if: always()
+    needs: [testar, medir]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exigir todos os jobs
+        env:
+          TESTES: ${{ needs.testar.result }}
+          MEDICOES: ${{ needs.medir.result }}
+        run: test "$TESTES" = success && test "$MEDICOES" = success
+
