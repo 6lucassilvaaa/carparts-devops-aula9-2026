@@ -1,7 +1,7 @@
 modo,amostra,checkout_segundos,step_api_segundos,job_api_segundos,job_url
-completo,1,0.797213,1,5,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083118
-completo,2,0.834404,1,5,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083177
-completo,3,0.657268,1,4,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083296
-enxuto,1,0.950834,1,5,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083219
-enxuto,2,1.061794,1,7,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083175
-enxuto,3,1.079407,1,7,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462480620/job/122050083082
+completo,1,1.321695,1,7,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462793595/job/122051076798
+completo,2,0.879228,1,7,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462793595/job/122051076585
+completo,3,0.846511,1,6,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462793595/job/122051076781
+enxuto,1,1.272155,1,6,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462793595/job/122051076824
+enxuto,2,1.325985,1,6,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462793595/job/122051076901
+enxuto,3,1.403457,1,7,https://github.com/6lucassilvaaa/carparts-devops-aula9-2026/actions/runs/40462793595/job/122051076820

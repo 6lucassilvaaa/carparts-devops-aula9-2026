@@ -61,6 +61,7 @@ if(test.status !== 0) throw new Error('regressão não corrigida');
 run(['log','--oneline','--all','--graph']);
 run(['count-objects','-vH']);
 fs.mkdirSync(path.join(root,'evidencias'),{recursive:true});
+run(['bundle','create',path.join(root,'evidencias/laboratorio.bundle'),'--all']);
 fs.writeFileSync(path.join(root,'evidencias/laboratorio-git.txt'),out.join('\n'));
 console.log('Conflito, rebase, revert e bisect executados e verificados. Log salvo em evidencias/laboratorio-git.txt.');
 console.log('Repositório de evidência preservado em ' + repo);
